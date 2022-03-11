@@ -1,0 +1,14 @@
+div{
+    width:230px;
+    height:300px;
+    border: 2px solid red;
+    display:inline-block;
+    margin-top: 6px;
+    margin-left:  6px;
+    padding: 40px;
+}
+button
+{
+    display: block;
+    margin: auto;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+    <input type="search" name="search" id="x"/>
+    <button onclick="onSearch()" >search</button>
+    <ul id="manja">
+        <li class="xl">mohan</li>
+        <li class="xl">manja</li>
+        <li class="xl">thikshna</li>
+        <li class="xl">krishna</li>
+        <li class="xl">shiva</li>
+        <li class="xl">rama</li>
+        <li class="xl">ramesh</li>
+        <li class="xl">sunal</li>
+        <li class="xl">raj</li>
+        <li class="xl">ethan</li>
+        <li class="xl">jordan</li>
+        <li class="xl">arjun</li>
+        <li class="xl">pruthvi</li>
+        <li class="xl">shiv</li>
+        <li class="xl">shankar</li>
+        <li class="xl">zubair</li>
+        <li class="xl">kundan</li>
+
+    </ul>
+    <ul id="hulk">
+
+    </ul>
+
+    <script>
+       let onSearch=()=>{
+           let arrayOfName=[]
+           let captain=" ";
+           let userInput=document.getElementById("x").value
+           console.log(userInput);
+           let vali=document.getElementsByClassName("xl")
+           console.log(vali);
+
+           for(i=0;i<vali.length;i++)
+           {
+            arrayOfName.push(vali[i].innerHTML)
+           }
+           console.log(arrayOfName);
+
+           let run=arrayOfName.filter(val=>val.toUpperCase().includes(userInput.toUpperCase())===true)
+        //    let run=arrayOfName.filter(val=>val.toUpperCase()===(userInput.toUpperCase()))
+           console.log(run);
+        //    let searchedData=run.map(val=>captain=captain+`<li>${val}<li>`)
+            for(i=0;i<run.length;i++)
+            {
+                captain+=`<li>${run[i]}</li>`
+            }
+        //    console.log(searchedData);
+           console.log(captain);
+
+           let unorder=document.getElementById("manja")
+           unorder.style.display="none"
+           let newUnorder=document.getElementById("hulk")
+           console.log(newUnorder);
+           newUnorder.innerHTML=captain
+       }
+    //    Armstrong number
+
+       let amstrong=(a)=>{
+    let power=a.toString().length;
+    let x=a.toString().split("");
+    let sum=0;
+    x.map(val=>val>0?sum+=Number(val)**power:"" )
+    sum===a?console.log(sum+" is a amstrong number"):console.log(sum+" is not a amstrong number")
+}
+amstrong(153)
+    </script>
+</body>
+</html>

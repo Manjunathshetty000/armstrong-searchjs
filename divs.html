@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dis.css">
+</head>
+
+<body>
+    <button onclick="changeColor()">change color</button>
+    <div class="odd"> odd</div>
+    <div class="even">even</div>
+    <div class="odd">odd</div>
+    <div class="even">even</div>
+    <div class="odd">odd </div>
+    <div class="even">even</div>
+    <div class="odd">odd</div>
+    <div class="even">even</div>
+    <div class="odd">odd</div>
+    <div class="even">even</div>
+
+    <script>
+        let changeColor = () => {
+            let oddColor = document.getElementsByClassName("odd")
+            let evenColor = document.getElementsByClassName("even")
+            for (i = 0; i < oddColor.length; i++) {
+                oddColor[i].style.backgroundColor = "blue";
+                oddColor[i].style.color="white"
+                oddColor[i].style.textAlign="center"
+                evenColor[i].style.backgroundColor = "green";
+                evenColor[i].style.color="white"
+                evenColor[i].style.textAlign="center"
+            }
+        }
+    </script>
+</body>
+
+</html>
